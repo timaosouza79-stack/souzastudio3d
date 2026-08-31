@@ -137,6 +137,129 @@ body {
     margin-top: 0.5rem;
 }
 
+/* Diferenciais */
+.diferenciais {
+    background: #111;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid #1e1e1e;
+}
+
+.diferenciais-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.diferencial-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.diferencial-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+}
+
+.diferencial-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1;
+}
+
+.diferencial-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
+.diferencial-card p {
+    font-size: 0.82rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* CTA WhatsApp */
+.home-whatsapp {
+    background: #0a0a0a;
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+}
+
+.home-whatsapp-inner {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.whatsapp-label {
+    font-size: 0.82rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.whatsapp-titulo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.whatsapp-sub {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 0.6rem;
+}
+
+.whatsapp-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 0.5rem;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 14px 24px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp-sec {
+    background: transparent;
+    border: 2px solid #25D366;
+    color: #25D366;
+}
+
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -462,7 +585,50 @@ footer {
 
 /* ---------- CELULAR (até 480px) ---------- */
 @media (max-width: 480px) {
+    /* Diferenciais — 1 coluna no mobile */
+    .diferenciais {
+        padding: 1.8rem 1rem;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .diferencial-card {
+        padding: 1.2rem 1rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .diferencial-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .diferencial-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .diferencial-card p {
+        font-size: 0.78rem;
+    }
+
+    /* WhatsApp mobile */
+    .home-whatsapp {
+        padding: 2rem 1rem 2.5rem;
+    }
+
+    .whatsapp-titulo {
+        font-size: 1.25rem;
+    }
+
     /* Navbar */
+
     .navbar {
         padding: 0.7rem 1rem;
         gap: 0.5rem;
