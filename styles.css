@@ -57,15 +57,17 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(18, 18, 18, 1)), url('assets/images/cover.jpg');
+    min-height: 100svh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(18, 18, 18, 1)), url('assets/images/cover.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
+    background-attachment: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 2rem 1rem;
 }
 
 .hero-content {
@@ -326,16 +328,18 @@ footer {
         letter-spacing: 0;
     }
 
-    /* Hero — ocupa tela toda, texto menor */
+    /* Hero — já usa min-height e scroll no base, só ajusta conteúdo */
     .hero {
-        height: 100svh; /* usa svh para celular (barra do browser não corta) */
-        background-attachment: scroll; /* fixed não funciona bem no iOS */
+        background-position: center top;
+        padding: 1.5rem 1rem;
     }
 
     .hero-content {
         padding: 1.5rem 1.2rem;
-        margin: 0 1rem;
+        margin: 0;
         border-radius: 12px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-content h1 {
