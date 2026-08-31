@@ -255,3 +255,177 @@ footer {
     opacity: 0.85;
     transform: scale(1.02);
 }
+
+/* ===================================================
+   RESPONSIVIDADE — Ajuste automático por dispositivo
+   =================================================== */
+
+/* ---------- TABLET (481px – 768px) ---------- */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .nav-title {
+        font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero-content {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Títulos de seção */
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Conteúdo principal */
+    main {
+        padding: 2.5rem 1.5rem;
+    }
+
+    /* Grid de produtos — 2 colunas no tablet */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    /* Grid de serviços */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+}
+
+/* ---------- CELULAR (até 480px) ---------- */
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 0.7rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .navbar .logo {
+        font-size: 0.9rem;
+    }
+
+    .nav-title {
+        font-size: 0.9rem;
+        letter-spacing: 0;
+    }
+
+    /* Hero — ocupa tela toda, texto menor */
+    .hero {
+        height: 100svh; /* usa svh para celular (barra do browser não corta) */
+        background-attachment: scroll; /* fixed não funciona bem no iOS */
+    }
+
+    .hero-content {
+        padding: 1.5rem 1.2rem;
+        margin: 0 1rem;
+        border-radius: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.7rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+
+    /* Títulos */
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .subtitulo {
+        font-size: 0.88rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Conteúdo principal */
+    main {
+        padding: 2rem 1rem;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+
+    /* Grid de produtos — 1 coluna no celular */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Cards de produto — imagem menor no celular */
+    .product-img-wrap {
+        aspect-ratio: 4 / 3;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .product-info h3 {
+        font-size: 1rem;
+    }
+
+    .product-info p {
+        font-size: 0.85rem;
+    }
+
+    .btn-orcamento {
+        padding: 11px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Grid de serviços — 1 coluna no celular */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ---------- CELULAR PEQUENO (até 360px) ---------- */
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-title {
+        font-size: 0.8rem;
+    }
+
+    .navbar .logo {
+        font-size: 0.8rem;
+    }
+}
