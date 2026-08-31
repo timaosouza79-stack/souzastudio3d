@@ -854,3 +854,63 @@ footer {
         text-align: center;
     }
 }
+
+/* MakerWorld Section */
+.makerworld-section {
+    padding: 60px 20px;
+    background-color: var(--bg-card);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+.makerworld-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.makerworld-titulo {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+.makerworld-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.makerworld-desc strong {
+    color: #10B981; /* Bambu/MakerWorld kinda green vibe or just accent */
+}
+.makerworld-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn-makerworld {
+    background: #10B981;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.btn-makerworld:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+.btn-whatsapp-outline {
+    background: transparent;
+    color: #25D366;
+    border: 2px solid #25D366;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.btn-whatsapp-outline:hover {
+    background: #25D366;
+    color: #fff;
+    transform: translateY(-2px);
+}
