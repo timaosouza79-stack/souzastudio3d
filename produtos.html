@@ -17,8 +17,30 @@
         <section id="produtos">
             <h2>Nossos Produtos</h2>
             <p class="subtitulo">Todos os produtos são sob encomenda • Solicite seu orçamento!</p>
+            <div class="view-toggle-bar">
+                <span class="view-label">Visualizar como:</span>
+                <div class="view-toggle-btns">
+                    <button id="btn-grade" class="view-btn active" onclick="setView('grade')" title="Grade">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <rect x="1" y="1" width="6" height="6" rx="1.5" fill="currentColor"/>
+                            <rect x="11" y="1" width="6" height="6" rx="1.5" fill="currentColor"/>
+                            <rect x="1" y="11" width="6" height="6" rx="1.5" fill="currentColor"/>
+                            <rect x="11" y="11" width="6" height="6" rx="1.5" fill="currentColor"/>
+                        </svg>
+                        Grade
+                    </button>
+                    <button id="btn-lista" class="view-btn" onclick="setView('lista')" title="Lista">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <rect x="1" y="2" width="16" height="3" rx="1.5" fill="currentColor"/>
+                            <rect x="1" y="7.5" width="16" height="3" rx="1.5" fill="currentColor"/>
+                            <rect x="1" y="13" width="16" height="3" rx="1.5" fill="currentColor"/>
+                        </svg>
+                        Lista
+                    </button>
+                </div>
+            </div>
 
-            <div class="products-grid">
+            <div class="products-grid" id="products-container">
 
                 <!-- Cervos Decorativos -->
                 <div class="product-card">
@@ -344,4 +366,32 @@
     </footer>
 
 </body>
+
+<script>
+    function setView(modo) {
+        const container = document.getElementById('products-container');
+        const btnGrade = document.getElementById('btn-grade');
+        const btnLista = document.getElementById('btn-lista');
+
+        if (modo === 'lista') {
+            container.classList.add('view-lista');
+            btnLista.classList.add('active');
+            btnGrade.classList.remove('active');
+        } else {
+            container.classList.remove('view-lista');
+            btnGrade.classList.add('active');
+            btnLista.classList.remove('active');
+        }
+
+        // Lembra a escolha do cliente
+        localStorage.setItem('viewMode', modo);
+    }
+
+    // Ao carregar a página, aplica a preferência salva
+    window.addEventListener('DOMContentLoaded', () => {
+        const salvo = localStorage.getItem('viewMode') || 'grade';
+        setView(salvo);
+    });
+</script>
+
 </html>
