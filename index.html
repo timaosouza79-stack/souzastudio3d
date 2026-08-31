@@ -12,7 +12,10 @@
     <!-- Navbar -->
     <nav class="navbar">
         <span class="nav-title" style="color: var(--primary-color);">Souza 3D Studio</span>
-        <a href="https://makerworld.com/en" target="_blank" class="logo">Explorar Modelos 3D &#8594;</a>
+        <div class="nav-links">
+            <a href="https://makerworld.com/en" target="_blank" class="logo" style="margin-right: 15px; font-size: 0.95rem; font-weight: normal; color: rgba(255,255,255,0.8);">MakerWorld 🌐</a>
+            <a href="produtos.html" class="btn btn-full" style="padding: 6px 14px; font-size: 0.9rem; margin: 0;">Ver Catálogo</a>
+        </div>
     </nav>
 
     <!-- Hero -->
@@ -28,11 +31,54 @@
         <div class="home-cta-inner">
             <h1 class="home-title">Souza <span>3D</span> Studio</h1>
             <p class="home-desc">Do desenho à realidade — criamos peças únicas, personalizadas e com acabamento profissional.</p>
-            <a href="https://makerworld.com/en" target="_blank" class="btn btn-full">Explorar Modelos 3D (MakerWorld) 🌐</a>
+            <div class="hero-buttons">
+                <a href="produtos.html" class="btn btn-full" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Abrir Catálogo de Produtos
+                </a>
+                <a href="https://makerworld.com/en" target="_blank" class="btn btn-whatsapp-outline btn-makerworld-alt">Explorar MakerWorld 🌐</a>
+            </div>
         </div>
     </section>
 
 
+
+    <!-- Produtos em Destaque -->
+    <section class="destaques">
+        <div class="destaques-inner">
+            <h2 class="destaques-titulo">Destaques do Ateliê</h2>
+            <p style="text-align: center; color: var(--text-color); opacity: 0.8; max-width: 600px; margin: 0 auto 2rem auto;">Peças exclusivas desenhadas e produzidas por nós. Conheça as opções premium do nosso catálogo próprio.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="assets/images/dragao_articulado.jpg" alt="Dragão Articulado 3D">
+                    </div>
+                    <div class="product-info" style="align-items: center; text-align: center;">
+                        <h3>Dragão Articulado</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="assets/images/vaso_groot.jpg" alt="Vaso Baby Groot">
+                    </div>
+                    <div class="product-info" style="align-items: center; text-align: center;">
+                        <h3>Vaso Baby Groot</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="assets/images/suporte_controle.jpg" alt="Suporte Gamer">
+                    </div>
+                    <div class="product-info" style="align-items: center; text-align: center;">
+                        <h3>Suporte Gamer</h3>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="produtos.html" class="btn btn-full">Ver Catálogo Completo</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Explore MakerWorld -->
     <section class="makerworld-section">
