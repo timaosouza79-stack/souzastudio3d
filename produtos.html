@@ -436,6 +436,29 @@
     window.addEventListener('DOMContentLoaded', () => {
         const salvo = localStorage.getItem('viewMode') || 'grade';
         setView(salvo);
+
+        // Adiciona o link da imagem na mensagem do WhatsApp automaticamente
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+            const img = card.querySelector('img');
+            if (!img) return;
+            
+            const imgUrl = img.src; // URL absoluta gerada pelo navegador
+            const btns = card.querySelectorAll('.btn-orcamento');
+            
+            btns.forEach(btn => {
+                if (btn.href.includes('wa.me')) {
+                    const url = new URL(btn.href);
+                    const params = new URLSearchParams(url.search);
+                    const originalText = params.get('text') || '';
+                    
+                    const newText = `${originalText}\n\nImagem do produto: ${imgUrl}`;
+                    params.set('text', newText);
+                    
+                    btn.href = `${url.origin}${url.pathname}?${params.toString()}`;
+                }
+            });
+        });
     });
 </script>
 
