@@ -57,25 +57,27 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100svh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(18, 18, 18, 1)), url('assets/images/cover.jpg');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1rem;
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background: #0a0a0a;
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 3rem;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.1);
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.15) 40%, rgba(10,10,10,0.85) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 2rem;
 }
 
 .hero-content h1 {
@@ -428,42 +430,16 @@ footer {
         letter-spacing: 0;
     }
 
-    /* Hero — altura equilibrada no celular */
-    .hero {
-        background-size: cover;
-        background-position: center center;
-        background-color: #0a0a0a;
-        min-height: 65vh;
-        padding: 1.5rem 1rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero-content {
-        padding: 1.2rem 2rem;
-        margin: 0;
-        border-radius: 12px;
-        width: auto;
-        max-width: 90%;
-        background: rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(4px);
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-        letter-spacing: 0.5px;
-        margin-bottom: 0.7rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+    /* Hero overlay — ajuste do botão no mobile */
+    .hero-overlay {
+        padding-bottom: 1.5rem;
     }
 
     .btn {
-        padding: 10px 24px;
+        padding: 10px 28px;
         font-size: 1rem;
     }
+
 
     /* Títulos */
     h2 {
