@@ -558,61 +558,39 @@ footer {
         height: 14px;
     }
 
-    /* Grade — 1 coluna no celular para melhor leitura */
+    /* Grade — 2 colunas no celular (igual ao original) */
     .products-grid {
-        grid-template-columns: 1fr;
-        gap: 0.9rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
 
-    /* Card horizontal no mobile (grade) */
-    .product-card {
-        flex-direction: row;
-        align-items: stretch;
-        border-radius: 12px;
-    }
-
+    /* Cards da grade — verticais com imagem quadrada */
     .product-img-wrap {
-        width: 110px;
-        min-width: 110px;
+        aspect-ratio: 1 / 1;
+        width: 100%;
         height: auto;
-        aspect-ratio: unset;
-        align-self: stretch;
-        flex-shrink: 0;
-    }
-
-    .product-img-wrap img {
-        height: 100%;
-        object-fit: cover;
     }
 
     .product-info {
-        padding: 0.85rem 1rem;
-        flex: 1;
-        justify-content: space-between;
+        padding: 0.75rem 0.85rem;
     }
 
     .product-info h3 {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-bottom: 0.3rem;
         line-height: 1.3;
     }
 
     .product-info p {
-        font-size: 0.82rem;
-        color: #999;
-        line-height: 1.4;
-        margin-bottom: 0.7rem;
-    }
-
-    .btns-orcamento {
-        flex-direction: column;
-        gap: 0.4rem;
+        font-size: 0.78rem;
+        color: #aaa;
+        line-height: 1.35;
+        margin-bottom: 0.6rem;
     }
 
     .btn-orcamento {
-        padding: 9px 12px;
-        font-size: 0.82rem;
-        border-radius: 25px;
+        padding: 8px 10px;
+        font-size: 0.78rem;
     }
 
     /* Grid de serviços — 1 coluna no celular */
