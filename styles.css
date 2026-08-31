@@ -428,24 +428,25 @@ footer {
         letter-spacing: 0;
     }
 
-    /* Hero — imagem cobrindo toda a tela no celular */
+    /* Hero — tamanho proporcional no celular */
     .hero {
         background-size: cover;
         background-position: center center;
         background-color: #0a0a0a;
-        min-height: 100svh;
-        padding: 1.5rem 1rem;
-        align-items: flex-end;
-        padding-bottom: 2.5rem;
+        min-height: 55vw;
+        max-height: 320px;
+        padding: 1.2rem 1rem;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero-content {
-        padding: 1.2rem 1.5rem;
+        padding: 1rem 1.5rem;
         margin: 0;
         border-radius: 12px;
-        width: 100%;
-        max-width: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        width: auto;
+        max-width: 90%;
+        background: rgba(0, 0, 0, 0.55);
         backdrop-filter: blur(4px);
     }
 
